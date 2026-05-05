@@ -61,18 +61,18 @@ markdown_extensions:
       custom_checkbox: true
 
 nav:
-  - Home: README.md
-  - Master Repo Reference: MASTER_REPO_REF.md
+  - Home: index.md
+  - Master Repo Reference: master-repo-ref.md
   - Factory Docs:
-    - Machinery & Equipment: docs/machinery.md
-    - Energy Profile: docs/energy-profile.md
-    - Floor Plan: docs/floor-plan.md
-    - Automation Roadmap: docs/automation-roadmap.md
-    - Supply Chain: docs/supply-chain.md
-    - Regulatory & Compliance: docs/regulatory.md
-    - CapEx / OpEx: docs/capex-opex.md
-    - Digital Twin: docs/digital-twin.md
-    - MES Integration: docs/mes-integration.md
+    - Machinery & Equipment: machinery.md
+    - Energy Profile: energy-profile.md
+    - Floor Plan: floor-plan.md
+    - Automation Roadmap: automation-roadmap.md
+    - Supply Chain: supply-chain.md
+    - Regulatory & Compliance: regulatory.md
+    - CapEx / OpEx: capex-opex.md
+    - Digital Twin: digital-twin.md
+    - MES Integration: mes-integration.md
 
 extra:
   social:
