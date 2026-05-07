@@ -4,7 +4,10 @@
 **Document Ref:** CCG-PE-DTWIN-001 | **Version:** 1.0
 
 > This document follows the Coo-Cah group digital twin architecture defined in
-> `docs/digital-twin/architecture.md` within [Coo-Kah-Doks](https://github.com/oumar-code/Coo-Kah-Doks).
+> <a href="https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md">platform/digital-twin-platform-architecture.md</a>
+> within <a href="https://github.com/oumar-code/Coo-Kah-Doks">Coo-Kah-Doks</a>.
+> **Platform decision: Hybrid Coo-Cah DT Engine (not Azure Digital Twins / AWS TwinMaker)
+> — see ADR-003 in Coo-Kah-Doks.**
 
 ---
 
@@ -207,7 +210,8 @@ flowchart TD
 
 ### 5.3 Integration with Group Platform
 
-The Coo-Cah group digital twin platform (as defined in `docs/digital-twin/architecture.md`
+The Coo-Cah group digital twin platform (defined in
+<a href="https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md">platform/digital-twin-platform-architecture.md</a>
 in Coo-Kah-Doks) aggregates data from all factory twins. This factory publishes:
 
 | Published Data | Frequency | Consumer |
