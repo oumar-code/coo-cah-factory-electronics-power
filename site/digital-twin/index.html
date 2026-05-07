@@ -1,0 +1,1362 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Tier 1 Critical Infrastructure — Blueprint, operational docs &amp; AI-integration specs for the Coo-Cah Garage &amp; Power Electronics Factory (Sagamu, Ogun State, Nigeria).
+" name="description"/>
+<link href="https://oumar-code.github.io/coo-cah-factory-electronics-power/digital-twin/" rel="canonical"/>
+<link href="../capex-opex/" rel="prev"/>
+<link href="../mes-integration/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
+<title>Digital Twin - Coo-Cah Garage &amp; Power Electronics Factory</title>
+<link href="../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="amber" data-md-color-primary="deep-orange" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#digital-twin">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Coo-Cah Garage &amp; Power Electronics Factory" class="md-header__button md-logo" data-md-component="logo" href=".." title="Coo-Cah Garage &amp; Power Electronics Factory">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Coo-Cah Garage &amp; Power Electronics Factory
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Digital Twin
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="amber" data-md-color-media="" data-md-color-primary="deep-orange" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="amber" data-md-color-media="" data-md-color-primary="deep-orange" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/oumar-code/coo-cah-factory-electronics-power" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    oumar-code/coo-cah-factory-electronics-power
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../master-repo-ref/">
+        
+  
+  
+    
+  
+  Master Repo Reference
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../machinery/">
+          
+  
+  
+  Factory Docs
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Coo-Cah Garage &amp; Power Electronics Factory" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Coo-Cah Garage &amp; Power Electronics Factory">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Coo-Cah Garage &amp; Power Electronics Factory
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/oumar-code/coo-cah-factory-electronics-power" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    oumar-code/coo-cah-factory-electronics-power
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../master-repo-ref/">
+<span class="md-ellipsis">
+    
+  
+    Master Repo Reference
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Factory Docs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Factory Docs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../machinery/">
+<span class="md-ellipsis">
+    
+  
+    Machinery &amp; Equipment
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../energy-profile/">
+<span class="md-ellipsis">
+    
+  
+    Energy Profile
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floor-plan/">
+<span class="md-ellipsis">
+    
+  
+    Floor Plan
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../automation-roadmap/">
+<span class="md-ellipsis">
+    
+  
+    Automation Roadmap
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../supply-chain/">
+<span class="md-ellipsis">
+    
+  
+    Supply Chain
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../regulatory/">
+<span class="md-ellipsis">
+    
+  
+    Regulatory &amp; Compliance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../capex-opex/">
+<span class="md-ellipsis">
+    
+  
+    CapEx / OpEx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Digital Twin
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Digital Twin
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-digital-twin-strategy">
+<span class="md-ellipsis">
+      
+        1. Digital Twin Strategy
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-phase-1-asset-registry-data-foundation">
+<span class="md-ellipsis">
+      
+        2. Phase 1 — Asset Registry &amp; Data Foundation
+      
+    </span>
+</a>
+<nav aria-label="2. Phase 1 — Asset Registry &amp; Data Foundation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-asset-registry">
+<span class="md-ellipsis">
+      
+        2.1 Asset Registry
+      
+    </span>
+</a>
+<nav aria-label="2.1 Asset Registry" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#smt-line-assets">
+<span class="md-ellipsis">
+      
+        SMT Line Assets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#winding-cell-assets-phase-1-semi-manual-data-from-test-station">
+<span class="md-ellipsis">
+      
+        Winding Cell Assets (Phase 1 — Semi-manual, data from test station)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-bank-test-zone-assets">
+<span class="md-ellipsis">
+      
+        Load Bank Test Zone Assets
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-energy-monitoring-integration">
+<span class="md-ellipsis">
+      
+        2.2 Energy Monitoring Integration
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-mes-integration-phase-1-dt-scope">
+<span class="md-ellipsis">
+      
+        2.3 MES Integration (Phase 1 DT Scope)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-phase-2-live-process-twin-20272028">
+<span class="md-ellipsis">
+      
+        3. Phase 2 — Live Process Twin (2027–2028)
+      
+    </span>
+</a>
+<nav aria-label="3. Phase 2 — Live Process Twin (2027–2028)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-smt-digital-twin">
+<span class="md-ellipsis">
+      
+        3.1 SMT Digital Twin
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-cnc-winding-cell-digital-twin">
+<span class="md-ellipsis">
+      
+        3.2 CNC Winding Cell Digital Twin
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33-predictive-maintenance-engine">
+<span class="md-ellipsis">
+      
+        3.3 Predictive Maintenance Engine
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-phase-3-predictive-factory-20292031">
+<span class="md-ellipsis">
+      
+        4. Phase 3 — Predictive Factory (2029–2031)
+      
+    </span>
+</a>
+<nav aria-label="4. Phase 3 — Predictive Factory (2029–2031)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-full-factory-digital-twin">
+<span class="md-ellipsis">
+      
+        4.1 Full Factory Digital Twin
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-ai-scheduling-optimisation">
+<span class="md-ellipsis">
+      
+        4.2 AI Scheduling Optimisation
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-ai-failure-diagnostics">
+<span class="md-ellipsis">
+      
+        4.3 AI Failure Diagnostics
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-data-architecture">
+<span class="md-ellipsis">
+      
+        5. Data Architecture
+      
+    </span>
+</a>
+<nav aria-label="5. Data Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51-data-sources-and-protocols">
+<span class="md-ellipsis">
+      
+        5.1 Data Sources and Protocols
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52-data-storage">
+<span class="md-ellipsis">
+      
+        5.2 Data Storage
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#53-integration-with-group-platform">
+<span class="md-ellipsis">
+      
+        5.3 Integration with Group Platform
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../mes-integration/">
+<span class="md-ellipsis">
+    
+  
+    MES Integration
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-digital-twin-strategy">
+<span class="md-ellipsis">
+      
+        1. Digital Twin Strategy
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-phase-1-asset-registry-data-foundation">
+<span class="md-ellipsis">
+      
+        2. Phase 1 — Asset Registry &amp; Data Foundation
+      
+    </span>
+</a>
+<nav aria-label="2. Phase 1 — Asset Registry &amp; Data Foundation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-asset-registry">
+<span class="md-ellipsis">
+      
+        2.1 Asset Registry
+      
+    </span>
+</a>
+<nav aria-label="2.1 Asset Registry" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#smt-line-assets">
+<span class="md-ellipsis">
+      
+        SMT Line Assets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#winding-cell-assets-phase-1-semi-manual-data-from-test-station">
+<span class="md-ellipsis">
+      
+        Winding Cell Assets (Phase 1 — Semi-manual, data from test station)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-bank-test-zone-assets">
+<span class="md-ellipsis">
+      
+        Load Bank Test Zone Assets
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-energy-monitoring-integration">
+<span class="md-ellipsis">
+      
+        2.2 Energy Monitoring Integration
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-mes-integration-phase-1-dt-scope">
+<span class="md-ellipsis">
+      
+        2.3 MES Integration (Phase 1 DT Scope)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-phase-2-live-process-twin-20272028">
+<span class="md-ellipsis">
+      
+        3. Phase 2 — Live Process Twin (2027–2028)
+      
+    </span>
+</a>
+<nav aria-label="3. Phase 2 — Live Process Twin (2027–2028)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-smt-digital-twin">
+<span class="md-ellipsis">
+      
+        3.1 SMT Digital Twin
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-cnc-winding-cell-digital-twin">
+<span class="md-ellipsis">
+      
+        3.2 CNC Winding Cell Digital Twin
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33-predictive-maintenance-engine">
+<span class="md-ellipsis">
+      
+        3.3 Predictive Maintenance Engine
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-phase-3-predictive-factory-20292031">
+<span class="md-ellipsis">
+      
+        4. Phase 3 — Predictive Factory (2029–2031)
+      
+    </span>
+</a>
+<nav aria-label="4. Phase 3 — Predictive Factory (2029–2031)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-full-factory-digital-twin">
+<span class="md-ellipsis">
+      
+        4.1 Full Factory Digital Twin
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-ai-scheduling-optimisation">
+<span class="md-ellipsis">
+      
+        4.2 AI Scheduling Optimisation
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-ai-failure-diagnostics">
+<span class="md-ellipsis">
+      
+        4.3 AI Failure Diagnostics
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-data-architecture">
+<span class="md-ellipsis">
+      
+        5. Data Architecture
+      
+    </span>
+</a>
+<nav aria-label="5. Data Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51-data-sources-and-protocols">
+<span class="md-ellipsis">
+      
+        5.1 Data Sources and Protocols
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52-data-storage">
+<span class="md-ellipsis">
+      
+        5.2 Data Storage
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#53-integration-with-group-platform">
+<span class="md-ellipsis">
+      
+        5.3 Integration with Group Platform
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="digital-twin">Digital Twin<a class="headerlink" href="#digital-twin" title="Permanent link">¶</a></h1>
+<p><strong>Factory:</strong> Coo-Cah Garage &amp; Power Electronics Factory, Sagamu, Ogun State
+<strong>Document Ref:</strong> CCG-PE-DTWIN-001 | <strong>Version:</strong> 1.0</p>
+<blockquote>
+<p>This document follows the Coo-Cah group digital twin architecture defined in
+<code>docs/digital-twin/architecture.md</code> within <a href="https://github.com/oumar-code/Coo-Kah-Doks">Coo-Kah-Doks</a>.</p>
+</blockquote>
+<hr/>
+<h2 id="1-digital-twin-strategy">1. Digital Twin Strategy<a class="headerlink" href="#1-digital-twin-strategy" title="Permanent link">¶</a></h2>
+<p>The Coo-Cah Power Electronics Factory digital twin is built in three phases, aligned with the
+automation roadmap:</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Period</th>
+<th>DT Maturity</th>
+<th>Key Capability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1</td>
+<td>2025–2026</td>
+<td><strong>Data foundation</strong> — sensors in, data collected</td>
+<td>Asset registry; load bank test data; energy monitoring; MES integration</td>
+</tr>
+<tr>
+<td>Phase 2</td>
+<td>2027–2028</td>
+<td><strong>Live process twin</strong> — real-time operational state</td>
+<td>SMT + CNC winding DT live; predictive maintenance; AI anomaly detection</td>
+</tr>
+<tr>
+<td>Phase 3</td>
+<td>2029–2031</td>
+<td><strong>Predictive factory</strong> — autonomous optimisation</td>
+<td>Full factory DT; AI scheduling; lights-out process control</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="2-phase-1-asset-registry-data-foundation">2. Phase 1 — Asset Registry &amp; Data Foundation<a class="headerlink" href="#2-phase-1-asset-registry-data-foundation" title="Permanent link">¶</a></h2>
+<h3 id="21-asset-registry">2.1 Asset Registry<a class="headerlink" href="#21-asset-registry" title="Permanent link">¶</a></h3>
+<p>All production equipment, energy assets, and IT systems are registered in the digital twin
+asset registry. This is the single source of truth for:
+- Asset identity (tag number, make, model, serial, install date)
+- Maintenance schedule (last service, next service, planned downtime)
+- Sensor data streams (what data flows from each asset)
+- Historical performance (OEE, uptime, failure events)</p>
+<h4 id="smt-line-assets">SMT Line Assets<a class="headerlink" href="#smt-line-assets" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Asset Tag</th>
+<th>Equipment</th>
+<th>Sensor Streams</th>
+<th>DT Phase 1 Capability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMT-01</td>
+<td>Solder paste printer</td>
+<td>Print speed, squeegee pressure, paste height (via SPI feedback)</td>
+<td>Data collection; alarm on out-of-spec</td>
+</tr>
+<tr>
+<td>SMT-02</td>
+<td>SPI (solder paste inspection)</td>
+<td>Volume, height, area per joint; board pass/fail</td>
+<td>Real-time SPC charts in MES; trend alerts</td>
+</tr>
+<tr>
+<td>SMT-03</td>
+<td>Pick &amp; place #1 (YSM20R)</td>
+<td>CPH, nozzle pick errors, feeder errors, cycle time</td>
+<td>OEE calculation; feeder error trending</td>
+</tr>
+<tr>
+<td>SMT-04</td>
+<td>Pick &amp; place #2 (YSM10R)</td>
+<td>CPH, nozzle pick errors, feeder errors</td>
+<td>OEE calculation</td>
+</tr>
+<tr>
+<td>SMT-05</td>
+<td>Reflow oven</td>
+<td>All 10 zone temperatures (±0.5°C), board speed, atmosphere O₂%</td>
+<td>Temperature profile archive per board type; alarm on drift</td>
+</tr>
+<tr>
+<td>SMT-06</td>
+<td>AOI (post-reflow)</td>
+<td>Pass/fail per joint; defect category; board ID</td>
+<td>Defect Pareto; SPC on defect rate; correlation to reflow profile</td>
+</tr>
+<tr>
+<td>SMT-07</td>
+<td>Wave solder</td>
+<td>Wave height, solder temperature, flux volume, board speed</td>
+<td>Process recipe archive; solder bath temp trending</td>
+</tr>
+<tr>
+<td>SMT-08</td>
+<td>ICT tester</td>
+<td>Pass/fail per board; failure code; test time</td>
+<td>Yield tracking; component failure analysis</td>
+</tr>
+<tr>
+<td>SMT-09</td>
+<td>Depanelling router</td>
+<td>Spindle speed, feed rate, dust extraction pressure</td>
+<td>Blade life tracking</td>
+</tr>
+</tbody>
+</table>
+<h4 id="winding-cell-assets-phase-1-semi-manual-data-from-test-station">Winding Cell Assets (Phase 1 — Semi-manual, data from test station)<a class="headerlink" href="#winding-cell-assets-phase-1-semi-manual-data-from-test-station" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Asset Tag</th>
+<th>Equipment</th>
+<th>Sensor Streams</th>
+<th>DT Phase 1 Capability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WND-01/02</td>
+<td>Toroidal winding machines</td>
+<td>Turns counted (manual entry); wire tension; machine cycle time</td>
+<td>Winding batch tracking; turns vs. spec comparison</td>
+</tr>
+<tr>
+<td>WND-05</td>
+<td>Varnish tank</td>
+<td>Vacuum level, pressure cycle time, temperature</td>
+<td>Process log; cure cycle archive</td>
+</tr>
+<tr>
+<td>WND-06/07</td>
+<td>Transformer test stations</td>
+<td>Turns ratio, DCR, inductance, leakage, Hi-Pot result per unit</td>
+<td><strong>100% of wound components tested; results in MES; linked to unit serial</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="load-bank-test-zone-assets">Load Bank Test Zone Assets<a class="headerlink" href="#load-bank-test-zone-assets" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Asset Tag</th>
+<th>Equipment</th>
+<th>Sensor Streams</th>
+<th>DT Phase 1 Capability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TST-01 × 6</td>
+<td>Resistive load banks</td>
+<td>Power (kW), voltage, current, frequency, test duration</td>
+<td><strong>Real-time test results to MES; automatic pass/fail logged against serial number</strong></td>
+</tr>
+<tr>
+<td>TST-02 × 4</td>
+<td>Power quality analysers</td>
+<td>Voltage THD, current THD, PF, harmonics</td>
+<td>Waveform archive per unit; SPC on THD</td>
+</tr>
+<tr>
+<td>TST-05 × 4</td>
+<td>Hi-Pot testers</td>
+<td>Test voltage, leakage current, pass/fail</td>
+<td>Hi-Pot result logged per serial; mandatory field in MES before label</td>
+</tr>
+<tr>
+<td>TST-08 × 3</td>
+<td>SCC test benches</td>
+<td>MPPT efficiency, charge current accuracy, voltage regulation</td>
+<td>All SCC test results in MES</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-energy-monitoring-integration">2.2 Energy Monitoring Integration<a class="headerlink" href="#22-energy-monitoring-integration" title="Permanent link">¶</a></h3>
+<p>The EMS (Schneider EcoStruxure PME) feeds all sub-meter data to the digital twin in real time.</p>
+<table>
+<thead>
+<tr>
+<th>Data Stream</th>
+<th>Frequency</th>
+<th>DT Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solar PV output (total + per string)</td>
+<td>1-minute</td>
+<td>Yield monitoring; shade analysis; string fault detection</td>
+</tr>
+<tr>
+<td>BESS SoC, power in/out, temperature</td>
+<td>1-minute</td>
+<td>BESS health tracking; dispatch optimisation</td>
+</tr>
+<tr>
+<td>Main incomer (grid)</td>
+<td>1-minute</td>
+<td>DISCO billing reconciliation; self-sufficiency calculation</td>
+</tr>
+<tr>
+<td>Generator run hours + fuel consumed</td>
+<td>Per event</td>
+<td>Cost-per-kWh calculation; emissions reporting</td>
+</tr>
+<tr>
+<td>SMT line energy</td>
+<td>5-minute</td>
+<td>Energy per PCB panel produced</td>
+</tr>
+<tr>
+<td>Load bank test zone energy</td>
+<td>Per test event</td>
+<td>Energy per unit tested</td>
+</tr>
+<tr>
+<td>Compressed air (kWh + m³)</td>
+<td>5-minute</td>
+<td>Energy/m³ efficiency; leak detection (night-time baseline)</td>
+</tr>
+<tr>
+<td>Building HVAC</td>
+<td>15-minute</td>
+<td>Seasonal benchmarking; setpoint optimisation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-mes-integration-phase-1-dt-scope">2.3 MES Integration (Phase 1 DT Scope)<a class="headerlink" href="#23-mes-integration-phase-1-dt-scope" title="Permanent link">¶</a></h3>
+<p>The MES is the operational layer; the digital twin is the analytical and monitoring layer.
+Data flows from MES to DT in near-real-time (&lt; 5-minute lag via REST API or MQTT broker).</p>
+<pre class="mermaid"><code>graph TD
+    A[MES - Production Layer] --&gt;|REST API / MQTT| B[Digital Twin Platform]
+    C[EMS - Energy Layer] --&gt;|Modbus TCP / REST| B
+    D[Test Equipment - Ethernet| Load bank, AOI, SPI] --&gt;|MQTT / OPC-UA| A
+    E[AMR Fleet - RCS] --&gt;|REST API| A
+    B --&gt; F[Digital Twin Dashboard]
+    B --&gt; G[Predictive Maintenance Engine Phase 2]
+    B --&gt; H[AI Diagnostics Engine Phase 3]
+    F --&gt; I[Factory Manager - Real-time View]
+    F --&gt; J[Group MES - Coo-Kah-Doks Integration]</code></pre>
+<hr/>
+<h2 id="3-phase-2-live-process-twin-20272028">3. Phase 2 — Live Process Twin (2027–2028)<a class="headerlink" href="#3-phase-2-live-process-twin-20272028" title="Permanent link">¶</a></h2>
+<h3 id="31-smt-digital-twin">3.1 SMT Digital Twin<a class="headerlink" href="#31-smt-digital-twin" title="Permanent link">¶</a></h3>
+<p>In Phase 2, the SMT digital twin becomes a <strong>live process simulation</strong> that mirrors the real
+SMT line in real time:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Real-time process state</td>
+<td>All machine states (running, idle, faulted) visible on DT dashboard</td>
+</tr>
+<tr>
+<td>Process recipe management</td>
+<td>DT holds master recipes; pushes to machines; detects unauthorised deviations</td>
+</tr>
+<tr>
+<td>SPC (Statistical Process Control)</td>
+<td>Automated Xbar-R charts on all critical SMT parameters; alerts on out-of-control</td>
+</tr>
+<tr>
+<td>Predictive nozzle wear</td>
+<td>CPH trending + pick error rate → predicts nozzle replacement need 24h in advance</td>
+</tr>
+<tr>
+<td>Thermal profile optimisation</td>
+<td>DT compares reflow oven profiles across product variants; recommends optimal profiles</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-cnc-winding-cell-digital-twin">3.2 CNC Winding Cell Digital Twin<a class="headerlink" href="#32-cnc-winding-cell-digital-twin" title="Permanent link">¶</a></h3>
+<p>CNC winding machines (deployed in Phase 2) stream telemetry to the DT:</p>
+<table>
+<thead>
+<tr>
+<th>Telemetry Stream</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Turns counter (encoder)</td>
+<td>Verify turns vs. specification for every transformer in real time</td>
+</tr>
+<tr>
+<td>Wire tension (load cell)</td>
+<td>Monitor tension drift → predicts broken wire events</td>
+</tr>
+<tr>
+<td>Spindle motor current</td>
+<td>Tracks motor wear; predicts bearing replacement</td>
+</tr>
+<tr>
+<td>Winding program ID</td>
+<td>Confirms correct program loaded for each product variant</td>
+</tr>
+<tr>
+<td>Winding cycle time</td>
+<td>OEE calculation; throughput optimisation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-predictive-maintenance-engine">3.3 Predictive Maintenance Engine<a class="headerlink" href="#33-predictive-maintenance-engine" title="Permanent link">¶</a></h3>
+<p>Phase 2 activates the predictive maintenance engine for high-criticality assets:</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Prediction Method</th>
+<th>Lead Time</th>
+<th>Alert Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reflow oven heater elements</td>
+<td>Temperature trend vs. historical failure curves</td>
+<td>1–2 weeks</td>
+<td>Work order raised in MES</td>
+</tr>
+<tr>
+<td>SMT pick-and-place nozzles</td>
+<td>Pick error rate trend</td>
+<td>24–48 hours</td>
+<td>Nozzle change work order</td>
+</tr>
+<tr>
+<td>CNC winding motor bearings</td>
+<td>Vibration FFT analysis</td>
+<td>2–4 weeks</td>
+<td>Maintenance scheduled</td>
+</tr>
+<tr>
+<td>Compressor air end</td>
+<td>Vibration + temperature</td>
+<td>4–8 weeks</td>
+<td>Service scheduled</td>
+</tr>
+<tr>
+<td>Load bank contactors</td>
+<td>Contact resistance measurement</td>
+<td>2–4 weeks</td>
+<td>Contactor replacement scheduled</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="4-phase-3-predictive-factory-20292031">4. Phase 3 — Predictive Factory (2029–2031)<a class="headerlink" href="#4-phase-3-predictive-factory-20292031" title="Permanent link">¶</a></h2>
+<h3 id="41-full-factory-digital-twin">4.1 Full Factory Digital Twin<a class="headerlink" href="#41-full-factory-digital-twin" title="Permanent link">¶</a></h3>
+<p>Phase 3 creates a complete factory-level DT that encompasses:
+- All production zones
+- All energy systems
+- All logistics (AMR fleet real-time position tracking in DT)
+- Supply chain visibility (inbound materials ETA from Coo-Cah Plastics, Tin Can Island)</p>
+<h3 id="42-ai-scheduling-optimisation">4.2 AI Scheduling Optimisation<a class="headerlink" href="#42-ai-scheduling-optimisation" title="Permanent link">¶</a></h3>
+<p>The Phase 3 DT includes an AI scheduling engine that:</p>
+<table>
+<thead>
+<tr>
+<th>Optimisation Target</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMT production sequence</td>
+<td>Minimise feeder change-overs; batch similar board variants</td>
+</tr>
+<tr>
+<td>Load bank test queue</td>
+<td>Prioritise units with oldest wait time; balance load across 6 banks</td>
+</tr>
+<tr>
+<td>CNC winding schedule</td>
+<td>Align with downstream assembly demand; minimise WIP queue</td>
+</tr>
+<tr>
+<td>AMR routing</td>
+<td>Real-time re-routing based on zone congestion detected in DT</td>
+</tr>
+<tr>
+<td>Energy dispatch</td>
+<td>Optimise BESS dispatch for time-of-use savings on residual grid draw</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-ai-failure-diagnostics">4.3 AI Failure Diagnostics<a class="headerlink" href="#43-ai-failure-diagnostics" title="Permanent link">¶</a></h3>
+<p>The Phase 3 AI diagnostics engine analyses failed units on the load bank:</p>
+<pre class="mermaid"><code>flowchart TD
+    A[Unit FAILS load bank test] --&gt; B[AI Diagnostic Engine]
+    B --&gt; C[Analyse test data:\n voltage deviation, THD, temperature,\n transfer time, battery simulation]
+    B --&gt; D[Retrieve SMT AOI history\n for this unit's PCB]
+    B --&gt; E[Retrieve winding test data\n for this unit's transformer]
+    B --&gt; F[Check firmware version\n against known issues database]
+    C &amp; D &amp; E &amp; F --&gt; G[Pattern match against\n historical failure database\n &gt; 50,000 failure records]
+    G --&gt; H[Root cause report:\n Probable cause + confidence %\n + repair action]
+    H --&gt; I{Confidence ≥ 80%?}
+    I -- Yes --&gt; J[Technician directed to\n specific repair action\n Target: &lt; 5 min]
+    I -- No --&gt; K[Escalate to\n Senior Engineer\n with diagnostic context]
+    H --&gt; L[Root cause logged → SPC feedback\n → process improvement]</code></pre>
+<hr/>
+<h2 id="5-data-architecture">5. Data Architecture<a class="headerlink" href="#5-data-architecture" title="Permanent link">¶</a></h2>
+<h3 id="51-data-sources-and-protocols">5.1 Data Sources and Protocols<a class="headerlink" href="#51-data-sources-and-protocols" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Data Source</th>
+<th>Protocol</th>
+<th>Data Type</th>
+<th>Update Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMT machines (Yamaha, DEK, Heller)</td>
+<td>OPC-UA / Yamaha proprietary API</td>
+<td>Process state, parameters, alarms</td>
+<td>1–10 seconds</td>
+</tr>
+<tr>
+<td>Load bank test stations</td>
+<td>Ethernet + Modbus TCP</td>
+<td>Test results, waveforms</td>
+<td>Per test event</td>
+</tr>
+<tr>
+<td>CNC winding machines (Phase 2)</td>
+<td>OPC-UA</td>
+<td>Telemetry, turns count, tension</td>
+<td>1 second</td>
+</tr>
+<tr>
+<td>EMS (Schneider PME)</td>
+<td>REST API + MQTT</td>
+<td>Energy sub-meters</td>
+<td>1–5 minutes</td>
+</tr>
+<tr>
+<td>MES (production data)</td>
+<td>REST API</td>
+<td>Work orders, serial numbers, test results</td>
+<td>Near real-time</td>
+</tr>
+<tr>
+<td>AMR fleet RCS</td>
+<td>REST API</td>
+<td>Robot position, task status, battery %</td>
+<td>10 seconds</td>
+</tr>
+<tr>
+<td>BESS BMS</td>
+<td>Modbus TCP</td>
+<td>SoC, power, temperature, alarms</td>
+<td>1 minute</td>
+</tr>
+<tr>
+<td>Solar inverters</td>
+<td>Modbus TCP + SunSpec</td>
+<td>Output power, string voltages, alarms</td>
+<td>1 minute</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-data-storage">5.2 Data Storage<a class="headerlink" href="#52-data-storage" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Data Tier</th>
+<th>Storage</th>
+<th>Retention</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hot (real-time)</td>
+<td>TimescaleDB (time-series)</td>
+<td>90 days</td>
+<td>Dashboard, real-time alerts</td>
+</tr>
+<tr>
+<td>Warm (operational)</td>
+<td>PostgreSQL + object storage</td>
+<td>3 years</td>
+<td>Trend analysis, warranty records</td>
+</tr>
+<tr>
+<td>Cold (archive)</td>
+<td>Object storage (S3-compatible)</td>
+<td>10 years</td>
+<td>ISO 50001 records, SON audit evidence</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-integration-with-group-platform">5.3 Integration with Group Platform<a class="headerlink" href="#53-integration-with-group-platform" title="Permanent link">¶</a></h3>
+<p>The Coo-Cah group digital twin platform (as defined in <code>docs/digital-twin/architecture.md</code>
+in Coo-Kah-Doks) aggregates data from all factory twins. This factory publishes:</p>
+<table>
+<thead>
+<tr>
+<th>Published Data</th>
+<th>Frequency</th>
+<th>Consumer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Production output (units/day per SKU)</td>
+<td>Daily</td>
+<td>Group ERP + operations dashboard</td>
+</tr>
+<tr>
+<td>Quality KPIs (FPY, load bank pass rate)</td>
+<td>Daily</td>
+<td>Group quality council</td>
+</tr>
+<tr>
+<td>Energy self-sufficiency %</td>
+<td>Daily</td>
+<td>Group sustainability report</td>
+</tr>
+<tr>
+<td>Inventory levels (key components)</td>
+<td>Real-time</td>
+<td>Group supply chain visibility</td>
+</tr>
+<tr>
+<td>Intra-group supply deliveries (CCG-PS, UPS, etc.)</td>
+<td>Per shipment</td>
+<td>Sister factory MES</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      © 2025 Coo-Cah Technologies Holdings. All rights reserved. | Part of the Coo-Cah Manufacturing Ecosystem.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/oumar-code/Coo-Kah-Doks" rel="noopener" target="_blank" title="Master Repository — Coo-Kah-Doks">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+</body>
+</html>
