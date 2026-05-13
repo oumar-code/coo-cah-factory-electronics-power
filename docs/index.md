@@ -189,9 +189,13 @@ See [docs/energy-profile.md](./energy-profile.md) for full demand analysis and c
 | [docs/digital-twin.md](./digital-twin.md) | Asset registry, SMT + winding DT, energy monitoring |
 | [docs/mes-integration.md](./mes-integration.md) | Serial traceability, IEC 62040 records, load bank integration |
 | [implementation-plan.md](./implementation-plan.md) | Phase execution workstreams, milestones, governance, risk controls |
+| [docs/readiness-register.md](./readiness-register.md) | Canonical tracker for open Pass 7A/7B/8/9/10 readiness items |
 | [docs/ai-platform-status.md](./ai-platform-status.md) | AI platform maturity, controls, use-case status, and next priorities |
 | [docs/pentest-scoping.md](./pentest-scoping.md) | Pentest objectives, in-scope assets, OT constraints, and rules of engagement |
 | [docs/gap-closure-report.md](./gap-closure-report.md) | Supplementary documentation and readiness gap closure status |
+| [docs/sensor-map.md](./sensor-map.md) | Sensor registry, ingestion readiness, and data quality baseline |
+| [docs/bim/zone-boundaries.md](./bim/zone-boundaries.md) | Site-local BIM zone polygons for DT/MES spatial loading |
+| [docs/bim/asset-anchors.md](./bim/asset-anchors.md) | Fixed-asset coordinates and orientations for BIM/DT anchor loading |
 | [docs/intragroup-supply-coordination.md](./intragroup-supply-coordination.md) | Internal allocation rules, protected buffers, and intra-group SLA governance |
 
 ---
