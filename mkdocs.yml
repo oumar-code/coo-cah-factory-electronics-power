@@ -66,6 +66,7 @@ nav:
   - Master Repo Reference: master-repo-ref.md
   - Supplementary Docs:
     - Implementation Plan: implementation-plan.md
+    - Full Readiness Register: readiness-register.md
     - AI Platform Status: ai-platform-status.md
     - Pentest Scoping: pentest-scoping.md
     - Gap Closure Report: gap-closure-report.md
@@ -80,6 +81,10 @@ nav:
     - CapEx / OpEx: capex-opex.md
     - Digital Twin: digital-twin.md
     - MES Integration: mes-integration.md
+    - Sensor Registry: sensor-map.md
+    - BIM:
+      - Zone Boundaries: bim/zone-boundaries.md
+      - Asset Anchors: bim/asset-anchors.md
 
 extra:
   social:

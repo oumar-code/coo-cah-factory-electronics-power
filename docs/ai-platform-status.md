@@ -18,6 +18,7 @@ gated for Phase 2/3.
 - ✅ AI-assisted failure triage is enabled for NCR prioritisation.
 - 🟡 Predictive maintenance models are in validation with shadow-mode outputs.
 - 🟡 AI-driven production scheduling is design-complete but not active in dispatch control.
+- 🟠 Production endpoint cutover and service-account hardening remain open in Pass 10.
 - 🔒 All high-impact actions require engineering or quality sign-off.
 
 ---
@@ -28,7 +29,7 @@ gated for Phase 2/3.
 |---|---|---|
 | Data ingestion | Operational | MES, DT, EMS, and test bench feeds are available with factory schema mapping |
 | Feature store | Partial | Core quality/maintenance features are live; energy and supply features expanding |
-| Model serving | Controlled | Internal APIs serve assistive models only |
+| Model serving | Controlled | Internal APIs are active; production cutover for governed plant consumers remains open |
 | MLOps controls | Operational | Model versioning, approval workflow, and rollback playbook defined |
 | Monitoring | Operational | Drift, latency, and precision/recall tracking visible to AI + quality leads |
 | Governance | Operational | Human override mandatory for release, hold, and rework recommendations |
@@ -87,20 +88,71 @@ gated for Phase 2/3.
 
 ---
 
-## 7. Next 90-Day Priorities
+## 7. Production Go-Live Workstream (Pass 10)
 
-1. Finalise shadow-mode validation for predictive maintenance on SMT nozzles and reflow zones.
-2. Improve winding data fidelity by reducing manual-entry dependency.
-3. Expand failure-triage model coverage to UPS and power-tool test profiles.
-4. Integrate AI status KPIs into the weekly factory program review.
-5. Complete penetration-test actions for AI platform endpoints and service accounts.
+### 7.1 Go-Live Scope
+
+| Endpoint / Capability | Current State | Production Requirement | Owner |
+|---|---|---|---|
+| Failure-triage inference API | Internal controlled endpoint | Hardened production endpoint with mTLS and service-account scoping | AI Platform Lead |
+| Predictive-maintenance scoring API | Shadow-mode only | Production advisory endpoint behind approval gate | Reliability Engineering Lead |
+| Feature-store read path | Partial | Production secrets rotation and read-only service role | Data Platform Lead |
+| Model-monitoring pipeline | Operational | Pager / dashboard / audit export linked to on-call | MLOps Lead |
+| NCR feedback ingestion | Operational | Production retry policy and dead-letter queue monitoring | MES Integration Lead |
+
+### 7.2 Promotion Gates
+
+| Gate | Requirement | Status |
+|---|---|---|
+| G1 | Production IAM roles and service accounts least-privilege reviewed | Planned |
+| G2 | SLO dashboard live for latency, error rate, and stale-feature detection | Planned |
+| G3 | Shadow/parallel verification passes with no unresolved blocking variance | Planned |
+| G4 | Pentest blockers affecting AI endpoints closed or risk-accepted | Planned |
+| G5 | Rollback exercise completed inside target RTO | Planned |
+
+### 7.3 Service Objectives
+
+| SLO | Target |
+|---|---|
+| Inference API availability | ≥ 99.5% |
+| P95 inference latency | ≤ 1.5 s |
+| Failed request rate | < 1.0% |
+| Stale feature reads | 0 blocking reads on high-criticality use cases |
+| Rollback execution time | ≤ 30 minutes |
+
+### 7.4 Cutover and Hypercare
+
+| Stage | Exit Condition | Owner |
+|---|---|---|
+| Dev → Staging | Contract and auth tests pass; monitoring emits expected health events | AI Platform Lead |
+| Staging → Parallel production | Shadow outputs match approved tolerances for 2 consecutive weekly reviews | MLOps Lead |
+| Parallel → Primary production | Cutover CAB approves; rollback plan rehearsed | Factory Program Manager |
+| Hypercare (10 business days) | SLOs stable, no Sev-1/Sev-2 incidents, owners handoff complete | Operations Lead |
+
+### 7.5 Rollback Rule
+
+Rollback to the controlled internal endpoint baseline is mandatory if:
+
+1. availability drops below SLO for two consecutive reporting periods,
+2. a security control regression is confirmed,
+3. or prediction drift causes a blocked operational workflow without approved mitigation.
 
 ---
 
-## 8. Related Documents
+## 8. Next 90-Day Priorities
+
+1. Finalise shadow-mode validation for predictive maintenance on SMT nozzles and reflow zones.
+2. Improve winding data fidelity by reducing manual-entry dependency.
+3. Complete Pass 10 production IAM, service-account, and SLO dashboard readiness.
+4. Expand failure-triage model coverage to UPS and power-tool test profiles.
+5. Complete pentest actions and retest for AI platform endpoints and service accounts.
+
+---
+
+## 9. Related Documents
 
 - [Digital Twin](./digital-twin.md)
 - [MES Integration](./mes-integration.md)
 - [Pentest Scoping](./pentest-scoping.md)
+- [Full Readiness Register](./readiness-register.md)
 - [Gap Closure Report](./gap-closure-report.md)
-

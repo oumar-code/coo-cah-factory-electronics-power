@@ -9,13 +9,17 @@
 
 ## 1. Scope
 
-This report tracks closure status for supplementary-document and readiness gaps across:
+This report tracks closure status for supplementary-document gaps across:
 - AI platform implementation controls
 - Security/pentest scope and governance
 - Intra-group supply coordination mechanics
 - Program-level implementation planning visibility
 
-It supplements baseline factory documents and provides accountable closure tracking.
+It supplements baseline factory documents and provides accountable closure tracking for the
+documentation cycle only.
+
+Operational passes that remain open for full readiness are now tracked in
+[`docs/readiness-register.md`](./readiness-register.md).
 
 ---
 
@@ -30,6 +34,9 @@ It supplements baseline factory documents and provides accountable closure track
 | MkDocs supplementary navigation | Partial | Closed | ✅ |
 
 **Overall closure status:** **5 / 5 targeted gaps closed** for this documentation cycle.
+
+> **Important:** this does **not** mean factory operational readiness is complete. Pass 7A, 7B, 8, 9,
+> and 10 remain governed in the readiness register.
 
 ---
 
@@ -56,22 +63,27 @@ It supplements baseline factory documents and provides accountable closure track
 
 ---
 
-## 5. Residual Items
+## 5. Residual Operational Readiness Items
 
-No residual documentation gaps remain in this supplementary scope.
+No residual **documentation** gaps remain in this supplementary scope.
 
-Operational follow-through remains required in normal delivery cadence for:
-- certification execution timelines,
-- AI shadow-mode promotion decisions,
-- and pentest remediation tracking.
+The following **operational** items remain open and are tracked outside this document:
+
+| Pass | Open Item | Status | Canonical Tracker |
+|---|---|---|---|
+| Pass 7A | BIM zone boundary population | Open | [Full Readiness Register](./readiness-register.md) |
+| Pass 7B | BIM asset anchor population | Open | [Full Readiness Register](./readiness-register.md) |
+| Pass 8 | Full sensor registry population | Open | [Full Readiness Register](./readiness-register.md) |
+| Pass 9 | Pentest execution and findings closure | Open | [Full Readiness Register](./readiness-register.md) |
+| Pass 10 | AI platform production go-live | Open | [Full Readiness Register](./readiness-register.md) |
 
 ---
 
 ## 6. Related Documents
 
 - [AI Platform Status](./ai-platform-status.md)
+- [Full Readiness Register](./readiness-register.md)
 - [Pentest Scoping](./pentest-scoping.md)
 - [Intra-Group Supply Coordination](./intragroup-supply-coordination.md)
 - [Digital Twin](./digital-twin.md)
 - [MES Integration](./mes-integration.md)
-
