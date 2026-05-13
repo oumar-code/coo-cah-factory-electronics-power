@@ -188,6 +188,11 @@ See [docs/energy-profile.md](./docs/energy-profile.md) for full demand analysis 
 | [docs/capex-opex.md](./docs/capex-opex.md) | Phased CapEx, unit economics, BOM cost model, payback analysis |
 | [docs/digital-twin.md](./docs/digital-twin.md) | Asset registry, SMT + winding DT, energy monitoring |
 | [docs/mes-integration.md](./docs/mes-integration.md) | Serial traceability, IEC 62040 records, load bank integration |
+| [implementation-plan.md](./implementation-plan.md) | Phase execution workstreams, milestones, governance, risk controls |
+| [docs/ai-platform-status.md](./docs/ai-platform-status.md) | AI platform maturity, controls, use-case status, and next priorities |
+| [docs/pentest-scoping.md](./docs/pentest-scoping.md) | Pentest objectives, in-scope assets, OT constraints, and rules of engagement |
+| [docs/gap-closure-report.md](./docs/gap-closure-report.md) | Supplementary documentation and readiness gap closure status |
+| [docs/intragroup-supply-coordination.md](./docs/intragroup-supply-coordination.md) | Internal allocation rules, protected buffers, and intra-group SLA governance |
 
 ---
 

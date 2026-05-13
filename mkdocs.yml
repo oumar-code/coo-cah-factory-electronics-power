@@ -63,6 +63,11 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Master Repo Reference: master-repo-ref.md
+  - Supplementary Docs:
+    - AI Platform Status: ai-platform-status.md
+    - Pentest Scoping: pentest-scoping.md
+    - Gap Closure Report: gap-closure-report.md
+    - Intra-Group Supply Coordination: intragroup-supply-coordination.md
   - Factory Docs:
     - Machinery & Equipment: machinery.md
     - Energy Profile: energy-profile.md
