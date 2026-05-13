@@ -36,7 +36,8 @@ theme:
 
 plugins:
   - search
-  - mermaid2
+  - mermaid2:
+      javascript: javascripts/mermaid-loader.mjs
 
 markdown_extensions:
   - admonition
@@ -64,6 +65,7 @@ nav:
   - Home: index.md
   - Master Repo Reference: master-repo-ref.md
   - Supplementary Docs:
+    - Implementation Plan: implementation-plan.md
     - AI Platform Status: ai-platform-status.md
     - Pentest Scoping: pentest-scoping.md
     - Gap Closure Report: gap-closure-report.md

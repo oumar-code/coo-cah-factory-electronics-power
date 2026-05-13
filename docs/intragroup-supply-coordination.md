@@ -132,5 +132,4 @@ Where upstream disruption threatens internal SLAs, the factory shifts to:
 - [Supply Chain Strategy](./supply-chain.md)
 - [MES Integration](./mes-integration.md)
 - [Gap Closure Report](./gap-closure-report.md)
-- [Implementation Plan](../implementation-plan.md)
-
+- [Implementation Plan](./implementation-plan.md)
