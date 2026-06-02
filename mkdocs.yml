@@ -1,24 +1,27 @@
 site_name: Coo-Cah Garage & Power Electronics Factory
 site_description: >
-  Tier 1 Critical Infrastructure — Blueprint, operational docs & AI-integration specs for the
-  Coo-Cah Garage & Power Electronics Factory (Sagamu, Ogun State, Nigeria).
+  Blueprint, operational docs & AI-integration specifications for the Coo-Cah Garage &
+  Power Electronics Factory (Sagamu Industrial Estate, Ogun State, Nigeria). Tier 1 Critical
+  Infrastructure — Coo-Cah Technologies Holdings.
+site_author: Coo-Cah Technologies Holdings
 site_url: https://oumar-code.github.io/coo-cah-factory-electronics-power/
-repo_url: https://github.com/oumar-code/coo-cah-factory-electronics-power
+
 repo_name: oumar-code/coo-cah-factory-electronics-power
+repo_url: https://github.com/oumar-code/coo-cah-factory-electronics-power
 edit_uri: edit/main/docs/
 
 theme:
   name: material
   palette:
     - scheme: default
-      primary: deep-orange
-      accent: amber
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: deep-orange
-      accent: amber
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -27,8 +30,8 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - search.highlight
     - search.suggest
+    - search.highlight
     - content.code.copy
     - content.tabs.link
   icon:
@@ -36,8 +39,7 @@ theme:
 
 plugins:
   - search
-  - mermaid2:
-      javascript: javascripts/mermaid-loader.mjs
+  - mermaid2
 
 markdown_extensions:
   - admonition
@@ -64,13 +66,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Master Repo Reference: master-repo-ref.md
-  - Supplementary Docs:
-    - Implementation Plan: implementation-plan.md
-    - Full Readiness Register: readiness-register.md
-    - AI Platform Status: ai-platform-status.md
-    - Pentest Scoping: pentest-scoping.md
-    - Gap Closure Report: gap-closure-report.md
-    - Intra-Group Supply Coordination: intragroup-supply-coordination.md
   - Factory Docs:
     - Machinery & Equipment: machinery.md
     - Energy Profile: energy-profile.md
@@ -81,19 +76,12 @@ nav:
     - CapEx / OpEx: capex-opex.md
     - Digital Twin: digital-twin.md
     - MES Integration: mes-integration.md
-    - Sensor Registry: sensor-map.md
-    - BIM:
-      - Zone Boundaries: bim/zone-boundaries.md
-      - Asset Anchors: bim/asset-anchors.md
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/oumar-code/Coo-Kah-Doks
       name: Master Repository — Coo-Kah-Doks
-
-extra_css:
-  - stylesheets/extra.css
 
 copyright: >
   © 2025 Coo-Cah Technologies Holdings. All rights reserved. |
