@@ -136,7 +136,44 @@ Full readiness is achieved only when:
 
 ---
 
-## 8. Related Documents
+## 8. DT Go / No-Go Checklist
+
+- [ ] Pass 7A evidence package includes IFC import proof, geometry QA, and DT/MES sign-off
+- [ ] Pass 7B evidence package includes walkdown confirmation and production publication approval
+- [ ] Pass 8 OT export, connector ownership, and ingestion freshness/completeness checks are signed
+- [ ] Pass 9 critical/high findings are closed or formally risk-accepted
+- [ ] Pass 10 production IAM, SLO dashboards, rollback test, and hypercare ownership are complete
+- [ ] Three DT simulations have locked KPI definitions and reproducible evidence lineage
+- [ ] Live connectivity proof is published for critical streams before any DT-ready declaration
+
+**Decision rule:** if any checklist item remains open, DT-ready status remains blocked.
+
+---
+
+## 9. Two-Week Sprint Deliverables (2026-06-03 → 2026-06-17)
+
+| Deliverable | Owner | Target Date | Status |
+|---|---|---|---|
+| BIM evidence pack overview published | Digital Twin Lead | 2026-06-04 | ✅ Complete |
+| DT pilot evidence-pack scaffolding published | DT Engineering Lead | 2026-06-05 | ✅ Complete |
+| Weekly DT/MES/OT review log activated | PMO | 2026-06-05 | ✅ Complete |
+| Pass 7A sign-off package attached and reviewed | Digital Twin Lead | 2026-06-06 | 🟡 In progress |
+| Pass 7B walkdown package prepared | Controls Engineering Lead | 2026-06-13 | 🟡 In progress |
+| Pass 8 OT export and connector sign-off pack updated | MES / OT Integration Lead | 2026-06-17 | 🟡 In progress |
+| Three-scenario simulation evidence pack published | DT Engineering Lead | 2026-06-17 | ✅ Complete |
+| First connectivity proof artifact published | MES Product Owner | 2026-06-17 | ✅ Complete |
+
+---
+
+## 10. Escalation Rule
+
+Any blocker that threatens Pass 7A close by **2026-06-06** must be escalated to the Group CTO
+within **1 business day**. Because Passes 7A → 7B → 8 → 9 → 10 are hard-sequenced, a slip in Pass
+7A puts the entire DT readiness chain at risk.
+
+---
+
+## 11. Related Documents
 
 - [Gap Closure Report](./gap-closure-report.md)
 - [BIM Zone Boundaries](./bim/zone-boundaries.md)
@@ -144,3 +181,6 @@ Full readiness is achieved only when:
 - [Sensor Registry](./sensor-map.md)
 - [Pentest Scoping](./pentest-scoping.md)
 - [AI Platform Status](./ai-platform-status.md)
+- [DT Weekly Review Log](./dt-weekly-review-log.md)
+- [DT Simulation Evidence Pack](./dt-simulation-evidence-pack.md)
+- [DT Connectivity Proof](./dt-connectivity-proof.md)

@@ -3,7 +3,7 @@
 **Factory:** Coo-Cah Garage & Power Electronics Factory, Sagamu, Ogun State  
 **Repository:** `coo-cah-factory-electronics-power`  
 **Document Ref:** CCG-PE-BIM-ANCH-001 | **Version:** 1.0  
-**Dataset Status:** Design baseline populated; pending install walkdown and production publication
+**Dataset Status:** Design baseline populated; install walkdown and production publication in progress
 
 ---
 
@@ -122,9 +122,24 @@ This anchor set can move from design baseline to production registry only after:
 
 ---
 
-## 5. Related Documents
+## 5. Pass 7B Execution Tracker
+
+| Item | Owner | Target Date | Status | Evidence |
+|---|---|---|---|---|
+| Zone boundary dataset frozen for release | Digital Twin Lead | 2026-06-06 | Pending | Pass 7A sign-off note |
+| Controls + facilities walkdown completed | Controls Engineering Lead | 2026-06-13 | Pending | Install walkdown pack |
+| Position corrections applied and reviewed | Controls Engineering Lead | 2026-06-13 | Pending | Anchor revision note |
+| Digital Twin + MES publication sign-off completed | Digital Twin Lead + MES Lead | 2026-06-13 | Pending | Signed publication package |
+
+**Current release posture:** this anchor set remains a design baseline until Pass 7A is frozen and
+the walkdown evidence is complete.
+
+---
+
+## 6. Related Documents
 
 - [Full Readiness Register](../readiness-register.md)
+- [BIM Evidence Pack Overview](./README.md)
 - [BIM Zone Boundaries](./zone-boundaries.md)
 - [Machinery & Equipment](../machinery.md)
 - [Digital Twin](../digital-twin.md)
