@@ -221,3 +221,35 @@ in Coo-Kah-Doks) aggregates data from all factory twins. This factory publishes:
 | Energy self-sufficiency % | Daily | Group sustainability report |
 | Inventory levels (key components) | Real-time | Group supply chain visibility |
 | Intra-group supply deliveries (CCG-PS, UPS, etc.) | Per shipment | Sister factory MES |
+
+---
+
+## 6. DT Pilot Evidence Pack
+
+This factory follows the group pilot-proof structure from
+`docs/orchestration/dt-pilot-standards-and-templates.md` in **Coo-Kah-Doks**. The documents below
+prepare the local evidence pack without changing any group standard:
+
+| Evidence Artifact | Purpose | Current Status |
+|---|---|---|
+| [DT Simulation Evidence Pack](./dt-simulation-evidence-pack.md) | Locked scenarios, KPI formulas, baseline windows, and reproducibility stubs | In progress |
+| [DT Connectivity Proof](./dt-connectivity-proof.md) | Critical-stream connectivity capture and freshness checks | In progress |
+| [Full Readiness Register](./readiness-register.md) | Canonical gate status and go/no-go controls | Active |
+| [DT Weekly Review Log](./dt-weekly-review-log.md) | Weekly DT/MES/OT execution decisions and blocker review | Active |
+
+### 6.1 Baseline Window Control
+
+| Scenario ID | KPI Domain | Baseline Window | Control Rule | Current State |
+|---|---|---|---|---|
+| SIM-01 | Energy dispatch optimisation | First 14 calendar days after live EMS + DT ingestion stability is proven | No KPI claim until source completeness threshold is met | Baseline window reserved |
+| SIM-02 | SMT OEE / throughput | First 10 production days with stable MES + SMT connector flow | Compare only against matched product mix and shift pattern | Baseline window reserved |
+| SIM-03 | Load bank queue balancing | First 10 test days with stable serial-linked test records | Compare only against equivalent SKU mix and staffing pattern | Baseline window reserved |
+
+### 6.2 Evidence Lineage Rule
+
+No scenario may be promoted as proof until all four items exist:
+
+1. locked KPI formula and denominator definition,
+2. baseline and intervention windows,
+3. reproducibility references for queries or extracts,
+4. reviewer sign-off in the linked evidence pack.

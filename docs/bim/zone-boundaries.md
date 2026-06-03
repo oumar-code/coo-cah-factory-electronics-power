@@ -3,7 +3,7 @@
 **Factory:** Coo-Cah Garage & Power Electronics Factory, Sagamu, Ogun State  
 **Repository:** `coo-cah-factory-electronics-power`  
 **Document Ref:** CCG-PE-BIM-ZONE-001 | **Version:** 1.0  
-**Dataset Status:** Design baseline populated; pending final IFC import sign-off
+**Dataset Status:** Design baseline populated; final IFC import and production sign-off in progress
 
 ---
 
@@ -104,9 +104,24 @@ This document is ready for operational closure when:
 
 ---
 
-## 7. Related Documents
+## 7. Pass 7A Execution Tracker
+
+| Item | Owner | Target Date | Status | Evidence |
+|---|---|---|---|---|
+| Final IFC issue package attached to repository evidence set | Digital Twin Lead | 2026-06-06 | Pending | Link to approved IFC issue package |
+| IFC polygon import QA completed without geometry errors | Digital Twin Lead | 2026-06-06 | Pending | Import log / QA report |
+| Site walkdown completed against approved polygons | Facilities Lead | 2026-06-06 | Pending | Walkdown checklist |
+| Production spatial baseline sign-off completed | Digital Twin Lead + MES Lead | 2026-06-06 | Pending | Signed approval note |
+
+**Current release posture:** this document remains a design baseline until the items above are
+completed. No production-published claim should be made before the evidence is attached.
+
+---
+
+## 8. Related Documents
 
 - [Full Readiness Register](../readiness-register.md)
+- [BIM Evidence Pack Overview](./README.md)
 - [Factory Floor Plan](../floor-plan.md)
 - [BIM Asset Anchors](./asset-anchors.md)
 - [Digital Twin](../digital-twin.md)

@@ -138,9 +138,25 @@ This registry is ready for operational closure when:
 
 ---
 
-## 6. Related Documents
+## 6. Pass 8 Execution Tracker
+
+| Item | Owner | Target Date | Status | Notes |
+|---|---|---|---|---|
+| OT inventory export attached to evidence pack | MES / OT Integration Lead | 2026-06-17 | Pending | Required before Pass 8 close |
+| MQTT/OPC-UA point-list signed by controls and MES teams | MES / OT Integration Lead | 2026-06-17 | Pending | Required to move from mapping to activation |
+| WND07-PD-PC commissioning decision recorded | Test Engineering Lead | 2026-06-17 | Deferred pending WND-07 walkdown | Sensor remains `Planned` until deployment window is approved |
+| TST12-CHAMBER-TEMP commissioning decision recorded | Reliability Engineering Lead | 2026-06-17 | Deferred pending chamber commissioning | Sensor remains `Planned` until test chamber is in service |
+| Completeness and freshness checks executed on critical streams | MES Product Owner | 2026-06-27 | Pending | Final Pass 8 closure evidence |
+
+**Decision note:** the two `Planned` points are formally deferred in this sprint. They remain in the
+authoritative registry and require explicit promotion review before activation.
+
+---
+
+## 7. Related Documents
 
 - [Full Readiness Register](./readiness-register.md)
+- [DT Connectivity Proof](./dt-connectivity-proof.md)
 - [BIM Asset Anchors](./bim/asset-anchors.md)
 - [Digital Twin](./digital-twin.md)
 - [MES Integration](./mes-integration.md)

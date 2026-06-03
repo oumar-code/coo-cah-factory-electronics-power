@@ -67,6 +67,9 @@ nav:
   - Supplementary Docs:
     - Implementation Plan: implementation-plan.md
     - Full Readiness Register: readiness-register.md
+    - DT Weekly Review Log: dt-weekly-review-log.md
+    - DT Simulation Evidence Pack: dt-simulation-evidence-pack.md
+    - DT Connectivity Proof: dt-connectivity-proof.md
     - AI Platform Status: ai-platform-status.md
     - Pentest Scoping: pentest-scoping.md
     - Gap Closure Report: gap-closure-report.md
@@ -83,6 +86,7 @@ nav:
     - MES Integration: mes-integration.md
     - Sensor Registry: sensor-map.md
     - BIM:
+      - BIM Evidence Pack Overview: bim/README.md
       - Zone Boundaries: bim/zone-boundaries.md
       - Asset Anchors: bim/asset-anchors.md
 
